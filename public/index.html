@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pertamaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">🚀 WebKu</div>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#fitur">Fitur</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Website Pertamaku! 👋</h1>
+            <p>Website ini dibuat menggunakan Node.js dan di-deploy ke Vercel</p>
+            <button onclick="ambilDataAPI()">Coba API</button>
+        </div>
+    </section>
+
+    <!-- TENTANG SECTION -->
+    <section id="tentang" class="tentang">
+        <h2>Tentang Website Ini</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>Responsive</h3>
+                <p>Website ini bisa diakses dari HP maupun komputer</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Cepat</h3>
+                <p>Di-deploy menggunakan Vercel yang super cepat</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Node.js</h3>
+                <p>Backend menggunakan Express.js di Node.js</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FITUR API SECTION -->
+    <section id="fitur" class="fitur">
+        <h2>Coba Fitur API</h2>
+        <div class="api-demo">
+            <button onclick="ambilDataAPI()">🔗 Panggil API Hello</button>
+            <button onclick="ambilInfo()">📋 Panggil API Info</button>
+            <div id="hasil-api" class="hasil-api">
+                <p>Klik tombol di atas untuk mencoba API...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK SECTION -->
+    <section id="kontak" class="kontak">
+        <h2>Hubungi Saya</h2>
+        <form onsubmit="kirimPesan(event)">
+            <input type="text" placeholder="Nama Anda" required>
+            <input type="email" placeholder="Email Anda" required>
+            <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+            <button type="submit">Kirim Pesan 📨</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2024 Website Pertamaku | Dibuat dengan ❤️ dari HP Android</p>
+    </footer>
+
+    <!-- API RESPONSE BOX -->
+    <div id="api-popup" class="api-popup hidden">
+        <div class="popup-content">
+            <span class="close" onclick="tutupPopup()">&times;</span>
+            <h3>Response API:</h3>
+            <pre id="api-response"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+      </html>
